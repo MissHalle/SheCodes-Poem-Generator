@@ -7,15 +7,6 @@ a {
   color: darksalmon;
 }
 
-.container {
-  margin: 120px auto;
-  max-width: 600px;
-}
-
-header {
-  margin-bottom: 30px;
-}
-
 h1 {
   text-align: center;
   font-weight: 800;
@@ -23,7 +14,29 @@ h1 {
   line-height: 1.5;
   color: burlywood;
 }
+header {
+  margin-bottom: 30px;
+}
+.container {
+  margin: 120px auto;
+  max-width: 600px;
+}
+.poem {
+  font-size: 16px;
+  background-color: burlywood;
+  padding: 20px;
+  line-height: 1.5;
+  box-shadow: 0px 20px 60px rgba(39, 33, 66, 0.03);
+  border-radius: 10px;
+}
 
+.poem strong {
+  color: darkred;
+}
+
+.hidden {
+  display: none;
+}
 .form-container {
   background-color: darksalmon;
   border-radius: 50px;
@@ -41,6 +54,7 @@ form {
   font-size: 12px;
   opacity: 0.6;
   margin-top: 5px;
+  margin-left: 25px;
 }
 
 .instructions {
@@ -53,6 +67,15 @@ form {
   color: darkred;
 }
 
+.waiting {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 .button-submit {
   margin-left: 12px;
   background-color: bisque;
@@ -64,32 +87,8 @@ form {
   padding: 24px 24px;
 }
 
-.poem {
-  font-size: 16px;
-  background-color: burlywood;
-  padding: 20px;
-  line-height: 1.5;
-  box-shadow: 0px 20px 60px rgba(39, 33, 66, 0.03);
-  border-radius: 10px;
-}
-
-.hidden {
-  display: none;
-}
-.poem strong {
-  color: darkred;
-}
 footer {
   text-align: center;
   font-size: 14px;
   margin-top: 30px;
-}
-
-.generating {
-  animation: blink-animation Is steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
 }
